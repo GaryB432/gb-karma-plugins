@@ -1,0 +1,40 @@
+{
+  "name": "karma-timer-reporter",
+  "version": "0.0.1-alpha.4",
+  "description": "Karma plugin for test timing analytics",
+  "files": [
+    "lib",
+    "!lib/**/*.map"
+  ],
+  "author": {
+    "name": "Gary Bortosky",
+    "url": "https://github.com/GaryB432"
+  },
+  "private": false,
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "tsc --pretty"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GaryB432/gb-karma-plugins.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GaryB432/gb-karma-plugins/issues"
+  },
+  "homepage": "https://github.com/GaryB432/gb-karma-plugins/tree/master/packages/karma-timer-reporter",
+  "keywords": [
+    "karma-plugin",
+    "reporter"
+  ],
+  "peerDependencies": {
+    "karma": ">=0.9"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/karma": "3.0.5",
+    "typescript": "^3.7.2"
+  }
+}
