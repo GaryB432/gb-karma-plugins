@@ -21,6 +21,6 @@
     "lint": "eslint \"packages/**/{src,__tests__}/**/*.ts\" -f eslint-formatter-friendly -c \".eslintrc.js\" --no-eslintrc"
   },
   "dependencies": {
-    "lerna": "^3.18.4"
+    "lerna": "^3.20.2"
   }
 }
