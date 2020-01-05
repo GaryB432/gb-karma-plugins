@@ -69,7 +69,7 @@ const a: BrowserResults = {
   fullName:
     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36',
   name: 'Chrome 79.0.3945 (Windows 10.0.0)',
-  state: 'EXECUTING',
+  state: 'UMM',
   lastResult: {
     startTime: 1578186014680,
     total: 43,
