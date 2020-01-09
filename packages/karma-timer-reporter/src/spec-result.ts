@@ -13,5 +13,5 @@ export interface SpecResult {
 }
 
 export function compare(a: SpecResult, b: SpecResult): number {
-  return a.time - b.time;
+  return b.time - a.time;
 }

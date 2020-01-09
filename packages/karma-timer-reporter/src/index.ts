@@ -1,8 +1,8 @@
-import { SpecResult, compare } from './SpecResult';
-import { RunResults, Browser, Logger, Helper, LoggerFactory } from './Karma';
+import { SpecResult, compare } from './spec-result';
+import { RunResults, Browser, Logger, Helper, LoggerFactory } from './karma';
 
 interface TimerConfig {
-  tbd: number;
+  maxLogLines: number;
 }
 
 class TimerReporter {
@@ -17,16 +17,8 @@ class TimerReporter {
   ) {
     this.log = logger.create('reporter.timer');
   }
-  public onBrowserComplete(browser: Browser): void {
-    console.log(browser.fullName);
-    console.log(this.config.tbd);
-  }
   public onSpecComplete(browser: Browser, result: SpecResult): void {
-    console.log(browser.id, 'is fun');
-    // this.log.warn(JSON.stringify(browser));
-    // this.log.warn(JSON.stringify(result));
     this.specs.set(result.id, result);
-    // this.log.warn(result.id);
   }
   public onRunComplete(
     _browsersCollection: never[],
@@ -36,14 +28,13 @@ class TimerReporter {
       .slice()
       .filter(s => !s.skipped);
     specs.sort(compare);
-    const top = specs.slice(0, 5);
+    const top = specs.slice(0, this.config.maxLogLines || 10);
     for (const spec of top) {
-      const message = `${spec.description} ${this.helper.formatTimeInterval(
+      const message = `${spec.fullName} ${this.helper.formatTimeInterval(
         spec.time
       )}`;
-      this.log.warn(message);
+      this.log.info(message);
     }
-    this.log.warn(specs.length);
   }
 }
 

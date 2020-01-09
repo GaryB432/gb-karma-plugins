@@ -1,5 +1,5 @@
 /* eslint-disable sort-keys */
-import { compare, SpecResult } from '../src/SpecResult';
+import { compare, SpecResult } from '../src/spec-result';
 
 describe('SpecResult', () => {
   it('should initialize', () => {
@@ -32,6 +32,6 @@ describe('SpecResult', () => {
     };
     a.time = 1;
     b.time = 2;
-    expect(compare(a, b)).toBe(-1);
+    expect(compare(a, b)).toBe(1);
   });
 });
