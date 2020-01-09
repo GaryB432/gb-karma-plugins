@@ -4,15 +4,23 @@
 
 This reporter will list your slowest running tests in your console.
 
-## Usage
 
-To use in your own Node.js project, just execute
+## Installation
 
+The easiest way is to keep `karma-timer-reporter` as a devDependency in your `package.json`.
+```json
+{
+  "devDependencies": {
+    "karma": "~0.10",
+    "karma-timer-reporter": "~0.1"
+  }
+}
 ```
+
+You can add it to `package.json` with the following command:
+```bash
 npm install karma-timer-reporter --save-dev
 ```
-
-This will download the karma-timer-reporter and add the dependency to `package.json`.
 
 ## Configuration
 ```js
