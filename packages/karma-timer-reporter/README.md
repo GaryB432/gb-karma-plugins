@@ -22,7 +22,7 @@ reporters: ['timer']
 
 ## Configuration
 
-To limit the number of slow tests listed, use the `timerReporter` configuration in your karma.conf.js file
+Your ten slowest running tests will be listed in your console. To override this limit, use the `timerReporter` configuration in your karma.conf.js file
 
 ```js
 //karma.conf.js
@@ -31,7 +31,7 @@ To limit the number of slow tests listed, use the `timerReporter` configuration 
     ...
       reporters: ["timer"],
       timerReporter: {
-        maxLogLines: 5, // limit number of lines logged per test, default is 10
+        maxLogLines: 5, // limit number of tests listed
       },
       plugins: ["karma-timer-reporter"],
     ...
