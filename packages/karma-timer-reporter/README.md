@@ -14,27 +14,26 @@ npm install karma-timer-reporter --save-dev
 
 This will download the karma-timer-reporter and add the dependency to `package.json`.
 
-Then add `'timer'` to reporters in karma.conf.js, e.g.
-
-```
-reporters: ['timer']
-```
-
 ## Configuration
-
-Your ten slowest running tests will be listed in your console. To override this limit, use the `timerReporter` configuration in your karma.conf.js file
-
 ```js
-//karma.conf.js
-...
+// karma.conf.js
+module.exports = function(config) {
   config.set({
-    ...
-      reporters: ["timer"],
-      timerReporter: {
-        maxLogLines: 5, // limit number of tests listed
-      },
-      plugins: ["karma-timer-reporter"],
-    ...
+    reporters: ['progress', 'timer'],
+
+    // the default configuration
+    timerReporter: {
+      maxLogLines: 10 // max slow tests to list
+    },
+    
+    // add to plugins
+    plugins: [
+      // other plugins
+      'karma-timer-reporter'
+    ],
+
+  });
+};
 ```
 
 [npm-image]: https://badge.fury.io/js/karma-timer-reporter.svg
