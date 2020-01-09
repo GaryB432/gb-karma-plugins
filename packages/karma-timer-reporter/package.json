@@ -25,7 +25,7 @@
   "homepage": "https://github.com/GaryB432/gb-karma-plugins/tree/master/packages/karma-timer-reporter",
   "keywords": [
     "karma-plugin",
-    "reporter"
+    "karma-reporter"
   ],
   "peerDependencies": {
     "karma": ">=0.9"
