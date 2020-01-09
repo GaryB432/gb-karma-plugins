@@ -1,6 +1,6 @@
 {
   "name": "karma-timer-reporter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Karma plugin for test timing analytics",
   "files": [
     "lib"
