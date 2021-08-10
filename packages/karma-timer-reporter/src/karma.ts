@@ -16,7 +16,7 @@ const a: Browser = {
   name: 'Chrome 79.0.3945 (Windows 10.0.0)',
   state: 'UMM',
   lastResult: {
-    startTime: 1578186014680,
+    startTime: 1578186014681,
     total: 43,
     success: 2,
     failed: 0,
