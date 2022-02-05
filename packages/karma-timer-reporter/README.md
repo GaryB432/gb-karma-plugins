@@ -1,6 +1,6 @@
 # karma-timer-reporter
 
-[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]
+[![NPM version][npm-image]][npm-url] [![Build][actions-image]][actions-url]
 
 This reporter will list your slowest running tests in your console.
 
@@ -56,5 +56,5 @@ The reporter will produce lines showing your slowest tests like this
 
 [npm-image]: https://badge.fury.io/js/karma-timer-reporter.svg
 [npm-url]: https://npmjs.org/package/karma-timer-reporter
-[travis-image]: https://travis-ci.com/GaryB432/gb-karma-plugins.svg?branch=master
-[travis-url]: https://travis-ci.com/GaryB432/gb-karma-plugins
+[actions-image]: https://github.com/GaryB432/gb-karma-plugins/actions/workflows/ci.yml/badge.svg
+[actions-url]: https://github.com/GaryB432/gb-karma-plugins/actions
