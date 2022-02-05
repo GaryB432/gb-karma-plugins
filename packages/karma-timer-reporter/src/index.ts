@@ -13,7 +13,7 @@ class TimerReporter {
   constructor(
     protected helper: Helper,
     protected logger: LoggerFactory,
-    protected config: TimerConfig
+    protected config?: TimerConfig
   ) {
     this.log = logger.create('reporter.timer');
   }
@@ -28,7 +28,7 @@ class TimerReporter {
       .slice()
       .filter(s => !s.skipped);
     specs.sort(compare);
-    const top = specs.slice(0, this.config.maxLogLines || 10);
+    const top = specs.slice(0, this.config?.maxLogLines || 10);
     for (const spec of top) {
       const message = `${spec.fullName} ${this.helper.formatTimeInterval(
         spec.time
