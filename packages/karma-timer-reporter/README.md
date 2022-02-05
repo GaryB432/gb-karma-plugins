@@ -44,6 +44,16 @@ module.exports = function(config) {
 };
 ```
 
+## Result
+
+The reporter will produce lines showing your slowest tests like this
+
+```shell
+01 01 1970 00:00:01:000:INFO [reporter.timer]: AppComponent should create the app 3.039 secs
+01 01 1970 00:00:01:000:INFO [reporter.timer]: AppComponent should render complicated things 2.013 secs
+01 01 1970 00:00:01:000:INFO [reporter.timer]: ItemComponent should be created 0.007 secs
+```
+
 [npm-image]: https://badge.fury.io/js/karma-timer-reporter.svg
 [npm-url]: https://npmjs.org/package/karma-timer-reporter
 [travis-image]: https://travis-ci.com/GaryB432/gb-karma-plugins.svg?branch=master
